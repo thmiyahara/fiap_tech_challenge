@@ -33,3 +33,5 @@ POST /api/books: Adiciona um novo livro.
 GET /api/books: Obtém todos os livros.
 PUT /api/books/:id: Atualiza um livro existente.
 DELETE /api/books/:id: Deleta um livro.
+
+- A documentação do Swagger está disponível em http://localhost:3000/api-docs/
