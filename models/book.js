@@ -17,6 +17,17 @@ const Book = {
         return { data, error }; 
     },
 
+    // Função para obter um livro pelo ID
+    async getBookById(id) {
+        const { data, error } = await supabase
+            .from('books') // Certifique-se de que o nome da tabela é 'books' ou ajuste conforme necessário
+            .select('*')
+            .eq('id', id)
+            .single(); // Garante que apenas um registro seja retornado
+
+        return { data, error };
+    },
+
     // Buscar livros
     async getAllBooks() {
         return await supabase.from('books').select('*');
